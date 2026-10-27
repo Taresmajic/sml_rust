@@ -1,0 +1,5 @@
+error: expected event type, `on_entry`, `on_exit` or `unexpected_event`
+ --> tests/ui/event_not_a_type.rs:7:10
+  |
+7 |     *A + 42 = B,
+  |          ^^

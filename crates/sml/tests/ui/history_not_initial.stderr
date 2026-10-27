@@ -1,0 +1,5 @@
+error: `(H)` goes on the initial state: `*Idle(H)`
+ --> tests/ui/history_not_initial.rs:8:7
+  |
+8 |      B(H) + E = A,
+  |       ^^^

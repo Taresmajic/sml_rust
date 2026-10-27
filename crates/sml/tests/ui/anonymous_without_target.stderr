@@ -1,0 +1,5 @@
+error: anonymous transition needs a target: `= State`
+ --> tests/ui/anonymous_without_target.rs:7:5
+  |
+7 |     *A [g],
+  |     ^

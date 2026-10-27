@@ -1,0 +1,8 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc acae3e4f9950bb78f0a2f4f2720bc47bdf266d768b1308563aed450031a00cfb # shrinks to graph = Graph { title: "Random", nodes: [Node { kind: State, label: "A", details: [], child: None }], edges: [Edge { from: NodeId(0), to: NodeId(0), label: "/[a/a  a/] / a/" }, Edge { from: NodeId(0), to: NodeId(0), label: "" }, Edge { from: NodeId(0), to: NodeId(0), label: "" }, Edge { from: NodeId(0), to: NodeId(0), label: "" }] }
+cc 23bd1cf26428bc8d1e17b8bc6ee66f5037153e7eface3a3addeb4e667072cd6b # shrinks to graph = Graph { title: "Random", nodes: [Node { kind: State, label: "a", details: [], child: None }, Node { kind: State, label: "A", details: [], child: None }, Node { kind: State, label: "a", details: [], child: None }, Node { kind: State, label: "a", details: [], child: None }, Node { kind: State, label: "Ainf", details: [" "], child: None }, Node { kind: State, label: "a", details: [], child: None }], edges: [] }

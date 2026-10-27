@@ -1,0 +1,5 @@
+error: `X` is the terminate state; it has no transitions
+ --> tests/ui/terminate_as_source.rs:8:6
+  |
+8 |      X + E = A,
+  |      ^

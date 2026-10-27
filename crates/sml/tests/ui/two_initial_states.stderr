@@ -1,0 +1,5 @@
+error: second initial state: orthogonal regions are not supported
+ --> tests/ui/two_initial_states.rs:8:5
+  |
+8 |     *B + E = A,
+  |     ^

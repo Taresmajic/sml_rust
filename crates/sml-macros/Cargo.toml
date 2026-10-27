@@ -1,0 +1,21 @@
+[package]
+name = "sml-macros"
+description = "Proc macro for the `sml` crate: Boost.SML-style transition table DSL"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1.0.107"
+quote = "1.0.47"
+sml-diagram = { path = "../sml-diagram", version = "0.1.0", optional = true }
+syn = { version = "3.0.9", features = ["full"] }
+
+[features]
+diagram = ["dep:sml-diagram"]
+
+[lints]
+workspace = true

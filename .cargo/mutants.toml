@@ -1,0 +1,25 @@
+# Tests for the macro crate live in `sml`.
+test_workspace = true
+# The layout engine runs inside the proc macro (feature `diagram`), so a mutant that
+# loops forever hangs *compilation*; cap builds as well as tests.
+build_timeout_multiplier = 4.0
+timeout_multiplier = 4.0
+
+# Reviewed survivors that cannot change observable output. Any new survivor fails the run.
+exclude_re = [
+    # Exact-tie comparisons on f64 values that never tie in practice.
+    'svg\.rs.*replace < with <= in num',
+    'route\.rs.*replace < with <= in attach',
+    # Crossing-reduction heuristics: sweep direction, keeping the newer of two equally good
+    # orders, and extra transpose passes only change work done, not the best order found.
+    'replace % with / in minimize_crossings',
+    'replace < with <= in minimize_crossings',
+    'delete ! in transpose',
+    # `segments[i * 1..]` also compares a segment with itself, which never counts as a crossing.
+    'replace \+ with \* in crossings',
+    # `*next *= 1` never advances the DFS, so it loops forever; it was verified to be
+    # caught (as a timeout), and excluding it keeps every run from waiting out the timeout.
+    'replace \+= with \*= in search',
+    # Alternating sweep direction in x placement: the isotonic rounds converge either way.
+    'replace % with / in assign_x',
+]

@@ -1,0 +1,5 @@
+error: wrap closure actions in parentheses: `/ (|ctx: &mut C| ...)`
+ --> tests/ui/unparenthesized_closure.rs:7:14
+  |
+7 |     *A + E / |c: &mut ()| {} = B,
+  |              ^

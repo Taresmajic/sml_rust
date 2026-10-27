@@ -1,0 +1,5 @@
+error: guards combine with `&&`, `||` and `!` only
+ --> tests/ui/bad_guard_operator.rs:7:15
+  |
+7 |     *A + E [g + g] = B,
+  |               ^

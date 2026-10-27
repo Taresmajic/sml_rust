@@ -1,0 +1,9 @@
+error[E0277]: `fn(u32) -> bool {bad}` is not a valid guard
+ --> tests/ui/guard_wrong_signature.rs:7:13
+  |
+7 |     *A + E [bad] = B,
+  |             ^^^ invalid guard
+  |
+  = help: the trait `sml::__private::Guard<_, _, _>` is not implemented for fn item `fn(u32) -> bool {bad}`
+  = note: guards are `Fn(&Context, &Event) -> bool` or `Fn(&Context) -> bool`
+  = note: closures need explicit parameter types: `|ctx: &Ctx| ...`

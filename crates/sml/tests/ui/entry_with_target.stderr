@@ -1,0 +1,5 @@
+error: `on_entry`/`on_exit` rows take only an action
+ --> tests/ui/entry_with_target.rs:7:10
+  |
+7 |     *A + on_entry / g = B,
+  |          ^^^^^^^^

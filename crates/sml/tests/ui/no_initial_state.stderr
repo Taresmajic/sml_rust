@@ -1,0 +1,5 @@
+error: no initial state; mark one with `*`
+ --> tests/ui/no_initial_state.rs:6:13
+  |
+6 |     machine M;
+  |             ^

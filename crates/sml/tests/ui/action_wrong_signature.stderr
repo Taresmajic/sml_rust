@@ -1,0 +1,9 @@
+error[E0277]: `for<'a> fn(&'a u32) {bad}` is not a valid action
+ --> tests/ui/action_wrong_signature.rs:7:14
+  |
+7 |     *A + E / bad = B,
+  |              ^^^ invalid action
+  |
+  = help: the trait `sml::__private::Action<_, _, _>` is not implemented for fn item `for<'a> fn(&'a u32) {bad}`
+  = note: actions are `Fn(&mut Context, &Event)` or `Fn(&mut Context)`
+  = note: closures need explicit parameter types: `|ctx: &mut Ctx| ...`
